@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.5">
+  <hudsonUrl>http://marcs-pc:8080/</hudsonUrl>
+  <smtpAuthUsername>strands@hanheide.net</smtpAuthUsername>
+  <smtpAuthPassword>JZtcTjjlm2kJDL7V2Fk8Jwp9cxYtEw+BhDVvbyTKs68=</smtpAuthPassword>
+  <replyToAddress>strands@cs.bham.ac.uk</replyToAddress>
+  <smtpHost>smtp.gmail.com</smtpHost>
+  <useSsl>true</useSsl>
+  <smtpPort>465</smtpPort>
+  <charset>UTF-8</charset>
+</hudson.tasks.Mailer_-DescriptorImpl>
