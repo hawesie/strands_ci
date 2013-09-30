@@ -1,3 +1,5 @@
 [user]
 	email = marc@hanheide.net
 	name = Marc (as Jenkins user)
+[credential]
+	helper = store
