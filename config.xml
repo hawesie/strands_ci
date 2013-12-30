@@ -3,18 +3,33 @@
   <disabledAdministrativeMonitors>
     <string>jenkins.security.RekeySecretAdminMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>1.523</version>
+  <version>1.538</version>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>hudson.model.Hudson.Administer:marc</permission>
-    <permission>hudson.model.Hudson.Read:anonymous</permission>
+  <authorizationStrategy class="org.jenkinsci.plugins.GithubAuthorizationStrategy" plugin="github-oauth@0.14">
+    <rootACL>
+      <organizationNameList class="linked-list">
+        <string>strands-project</string>
+      </organizationNameList>
+      <adminUserNameList class="linked-list">
+        <string>marc-hanheide</string>
+        <string>gestom</string>
+        <string>cdondrup</string>
+      </adminUserNameList>
+      <authenticatedUserReadPermission>false</authenticatedUserReadPermission>
+      <allowGithubWebHookPermission>true</allowGithubWebHookPermission>
+      <allowCcTrayPermission>false</allowCcTrayPermission>
+      <allowAnonymousReadPermission>false</allowAnonymousReadPermission>
+    </rootACL>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-    <disableSignup>false</disableSignup>
-    <enableCaptcha>false</enableCaptcha>
+  <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
+    <githubWebUri>https://github.com</githubWebUri>
+    <githubApiUri>https://api.github.com</githubApiUri>
+    <clientID>e5b7c092ad06a9a0628f</clientID>
+    <clientSecret>b4538f68fdd450043085efc4ae223117c71b1e6d</clientSecret>
   </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
