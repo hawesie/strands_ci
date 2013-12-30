@@ -1,5 +1,6 @@
 *~
 *.scxml
+.dbus
 .bash_history
 .cache/
 .owner
