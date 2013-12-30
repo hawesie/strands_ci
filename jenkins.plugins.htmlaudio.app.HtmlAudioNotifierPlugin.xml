@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor plugin="html-audio-notifier@0.4">
+  <enabledByDefault>false</enabledByDefault>
+  <longPollingEnabled>false</longPollingEnabled>
+  <successSoundUrl></successSoundUrl>
+  <successAfterFailureSoundUrl>pop.wav</successAfterFailureSoundUrl>
+  <failureSoundUrl>horse.wav</failureSoundUrl>
+</jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor>
